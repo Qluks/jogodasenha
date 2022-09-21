@@ -38,15 +38,15 @@ class Rules extends Component {
     const { scrollOpen } = this.state;
     return (
       <div>
-        <RulesLink href="javascript:void(0)" onClick={this.__handleRulesView.bind(this)}>{ !scrollOpen ? `HOW TO PLAY` : `LET'S PLAY` }</RulesLink>
+        <RulesLink href="javascript:void(0)" onClick={this.__handleRulesView.bind(this)}>{ !scrollOpen ? `REGRAS` : `JOGAR` }</RulesLink>
         {
           scrollOpen ?
           <RulesWrapper>
-            <p>The goal of this game is to guess a 4-digit number within the least number of attempts possible.</p>
-            <p>With every guess, you will get a feedback indicating how many Bulls and Cows you got with the guess.</p>
-            <p>A Bull means: one of the digits is correct, and is also at the right place.</p>
-            <p>A Cow means: one of the digits is a right number, but not at the right place.</p>
-            <p> For example, given that the answer is 0130, a guess of 3610 will receive 1 Bull 2 Cows. 1 Bull is 0, 2 Cows are 1 and 3.</p>
+            <p>O objetivo deste jogo é adivinhar um número de 4 dígitos com o menor número de tentativas possível.</p>
+            <p>Com cada palpite, você receberá um feedback indicando quantos touros e vacas você obteve com o palpite.</p>
+            <p>Um touro significa: um dos dígitos está correto e também está no lugar certo.</p>
+            <p>Uma vaca significa: um dos dígitos é um número certo, mas não está no lugar certo.</p>
+            <p> Por exemplo, dado que a resposta é 0130, um palpite de 3610 receberá 1 Touro 2 Vacas. 1 Touro é 0, 2 Vacas são 1 e 3.</p>
           </RulesWrapper>: ''
         }
       </div>

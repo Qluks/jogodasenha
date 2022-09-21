@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const GameInput = styled.input`
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   box-sizing: border-box;
   padding: 10px;
-  color: cadetblue;
+  color: black;
   font-family: inherit;
   margin: 3% auto;
-  max-width: 80%;
-  border-radius: 20px;
+  max-width: 50%;
+  border-radius: 5px;
   border: none;
   &:focus {
     outline: none;
@@ -103,7 +103,7 @@ class Game extends Component {
         ? attempts.map(item => {
             return (
               <GameAttempts key={item.key}>
-                <p> ATTEMPT {item.attemptCount}</p>
+                <p> TENTATIVA {item.attemptCount}</p>
                 <h2>{item.content}</h2>
                 <p>
                   {item.bullsCount}{" "}
@@ -118,7 +118,7 @@ class Game extends Component {
     return (
       <div>
         {gameWon ? (
-          <WonText> WOOHOO! You won in just {attemptCount} attempts</WonText>
+          <WonText> Parabéns!! Você venceu com apenas {attemptCount} tentativas!!</WonText>
         ) : (
           <div>
             <form noValidate autoComplete="off" onSubmit={this.__checkAnswer}>
